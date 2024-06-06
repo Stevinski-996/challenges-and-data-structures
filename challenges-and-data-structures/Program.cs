@@ -1,10 +1,29 @@
 ﻿namespace challenges_and_data_structures
 {
-    internal class Program
+    public class ArrayManipulation
     {
-        static void Main(string[] args)
+        public static int MostFrequentNumber(int[] arr)
         {
-            Console.WriteLine("Hello, World!");
+            int mostFrequentNumber = arr[0];
+            int maxFrequency = 1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int frequency = 1;
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i] == arr[j])
+                        frequency++;
+                }
+                if (frequency > maxFrequency || (frequency == maxFrequency && arr[i] < mostFrequentNumber))
+                {
+                    mostFrequentNumber = arr[i];
+                    maxFrequency = frequency;
+                }
+            }
+
+            return mostFrequentNumber;
         }
     }
+
 }
