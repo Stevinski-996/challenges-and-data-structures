@@ -17,3 +17,8 @@ Description :
 This function identifies the highest number in a list of integers.  It begins by assuming the first number in the list is the largest. Then, it systematically examines each remaining number. If it finds a number bigger than the current "largest", it updates its record. After checking all the numbers, the function returns the final recorded largest value.
 
 ![Maximum-Value](./White%20Board%20Challenge/Images/MaximumValue.png)
+
+### Challenge 3 : Remove-Middle-Value
+Description : 
+This function, RemoveMiddleValue, takes an array as its argument. It manually removes the element at the middle index if the array length is odd. If the array length is even, it removes the two elements in the middle. It does this without using any built-in array methods.
+![Remove Middle Value from Array](./White%20Board%20Challenge/Images/Remove%20Middle%20Value%20from%20Array.png)
