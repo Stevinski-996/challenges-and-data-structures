@@ -22,3 +22,8 @@ This function identifies the highest number in a list of integers.  It begins by
 Description : 
 This function, RemoveMiddleValue, takes an array as its argument. It manually removes the element at the middle index if the array length is odd. If the array length is even, it removes the two elements in the middle. It does this without using any built-in array methods.
 ![Remove Middle Value from Array](./White%20Board%20Challenge/Images/Remove%20Middle%20Value%20from%20Array.png)
+
+### Challenge 4 : Insert-Middle-Value
+Description : 
+This function, MiddleValue, takes an array and a value as input. It manually inserts the given value at the middle index of the array, shifting existing elements as needed. It does this without using any built-in array methods, and returns the resulting array. If the array length is even, the new value is inserted after the first middle element.
+![Insert Middle Value To Array](./White%20Board%20Challenge/Images/Insert-Middle-Value..png)
