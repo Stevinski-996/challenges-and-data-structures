@@ -27,3 +27,6 @@ This function, RemoveMiddleValue, takes an array as its argument. It manually re
 Description : 
 This function, MiddleValue, takes an array and a value as input. It manually inserts the given value at the middle index of the array, shifting existing elements as needed. It does this without using any built-in array methods, and returns the resulting array. If the array length is even, the new value is inserted after the first middle element.
 ![Insert Middle Value To Array](./White%20Board%20Challenge/Images/Insert-Middle-Value..png)
+
+
+### Challenge 5 : ![FindDuplicates](Challenges/Find-Duplicates/README.md)
