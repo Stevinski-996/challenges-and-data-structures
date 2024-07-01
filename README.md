@@ -29,4 +29,7 @@ This function, MiddleValue, takes an array and a value as input. It manually ins
 ![Insert Middle Value To Array](./White%20Board%20Challenge/Images/Insert-Middle-Value..png)
 
 
-### Challenge 5 : ![FindDuplicates](Challenges/Find-Duplicates/README.md)
+### Challenge 5 : [FindDuplicates](Challenges/Find-Duplicates/README.md)
+
+
+### Challenge 6 :[Common_Element](Challenges/Common_Elements/README.md)
