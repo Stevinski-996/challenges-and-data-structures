@@ -7,43 +7,33 @@ namespace FindDuplicatesApp
     {
         static void Main(string[] args)
         {
-            int[] array1 = { 1, 2, 3, 1, 2, 3 };
-            int[] array2 = { 16, 8, 31, 17, 15, 23, 17, 8 };
-            int[] array3 = { 5, 10, 16, 20, 10, 16 };
+            int[] input = { 1, 2, 3, 1, 2, 3 };
+            List<int> output = FindDuplicates(input);
 
-            Console.WriteLine("Duplicates in array1: " + string.Join(", ", FindDuplicates(array1)));
-            Console.WriteLine("Duplicates in array2: " + string.Join(", ", FindDuplicates(array2)));
-            Console.WriteLine("Duplicates in array3: " + string.Join(", ", FindDuplicates(array3)));
+            Console.WriteLine("Output Array: ");
+            foreach (var item in output)
+            {
+                Console.Write(item + " ");
+            }
         }
 
-        static int[] FindDuplicates(int[] array)
+        public static List<int> FindDuplicates(int[] input)
         {
-            Dictionary<int, int> counts = new Dictionary<int, int>();
             List<int> duplicates = new List<int>();
 
-            // Count occurrences of each element
-            foreach (int num in array)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (counts.ContainsKey(num))
+                for (int j = i + 1; j < input.Length; j++)
                 {
-                    counts[num]++;
-                }
-                else
-                {
-                    counts[num] = 1;
+                    if (input[i] == input[j] && !duplicates.Contains(input[i]))
+                    {
+                        duplicates.Add(input[i]);
+                        break;
+                    }
                 }
             }
 
-            // Collect elements that appear more than once
-            foreach (var kvp in counts)
-            {
-                if (kvp.Value > 1)
-                {
-                    duplicates.Add(kvp.Key);
-                }
-            }
-
-            return duplicates.ToArray();
+            return duplicates;
         }
     }
 }
