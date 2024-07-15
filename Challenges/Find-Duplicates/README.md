@@ -19,6 +19,6 @@ The challenge is to write a function called `FindDuplicates` that accepts an arr
 
 Below is the Console image with the Result of running:
 
-![Console](Challenges/Images/FindDuplicates.png)
+![Console](../Images/FindDuplicateValue.png)
 
 
