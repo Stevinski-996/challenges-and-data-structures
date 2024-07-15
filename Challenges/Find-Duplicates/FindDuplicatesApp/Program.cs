@@ -7,43 +7,44 @@ namespace FindDuplicatesApp
     {
         static void Main(string[] args)
         {
-            int[] array1 = { 1, 2, 3, 1, 2, 3 };
-            int[] array2 = { 16, 8, 31, 17, 15, 23, 17, 8 };
-            int[] array3 = { 5, 10, 16, 20, 10, 16 };
-
-            Console.WriteLine("Duplicates in array1: " + string.Join(", ", FindDuplicates(array1)));
-            Console.WriteLine("Duplicates in array2: " + string.Join(", ", FindDuplicates(array2)));
-            Console.WriteLine("Duplicates in array3: " + string.Join(", ", FindDuplicates(array3)));
+            int[] input = { 1, 2, 3, 1, 2, 3 };
+            int[] input2 = { 16, 8, 31, 17, 15, 23, 17 ,8};
+            int[] input3 = { 5, 10, 16, 20, 10, 16};
+            List<int> output = FindDuplicates(input);
+            List<int> output2 = FindDuplicates(input2);
+            List<int> output3 = FindDuplicates(input3);
+            Console.WriteLine("\nDuplicated Output1 Array: ");
+            printValues(output);
+            Console.WriteLine("\nDuplicated Output2 Array: ");
+            printValues(output2);
+            Console.WriteLine("\nDuplicated Output3 Array: ");
+            printValues(output3);
         }
 
-        static int[] FindDuplicates(int[] array)
+        public static List<int> FindDuplicates(int[] input)
         {
-            Dictionary<int, int> counts = new Dictionary<int, int>();
             List<int> duplicates = new List<int>();
 
-            // Count occurrences of each element
-            foreach (int num in array)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (counts.ContainsKey(num))
+                for (int j = i + 1; j < input.Length; j++)
                 {
-                    counts[num]++;
-                }
-                else
-                {
-                    counts[num] = 1;
+                    if (input[i] == input[j] && !duplicates.Contains(input[i]))
+                    {
+                        duplicates.Add(input[i]);
+                        break;
+                    }
                 }
             }
 
-            // Collect elements that appear more than once
-            foreach (var kvp in counts)
-            {
-                if (kvp.Value > 1)
-                {
-                    duplicates.Add(kvp.Key);
-                }
-            }
+            return duplicates;
+        }
+        public static void printValues(List<int> output) {
 
-            return duplicates.ToArray();
+            foreach (var item in output)
+            {
+                Console.Write(item + " ");
+            }
         }
     }
 }
