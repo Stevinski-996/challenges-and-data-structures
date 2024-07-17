@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 
-class Program {
+namespace Reverse_Words
+{
+public class Program {
     public static void Main (string[] args) 
     {
         Console.WriteLine("Enter your text here :");
@@ -10,7 +12,7 @@ class Program {
         Console.WriteLine(output);
 
     }
-static string ReversWord(string word){
+public static string ReversWord(string word){
     string[] words = word.Split(' ');
     string[] rw = new string[words.Length];
     for(int i = 0; i < words.Length ; i++) {
@@ -20,3 +22,4 @@ static string ReversWord(string word){
 }
 
     }
+}
