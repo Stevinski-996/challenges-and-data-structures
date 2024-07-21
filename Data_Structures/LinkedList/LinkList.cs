@@ -78,5 +78,21 @@ public void Print()
             }
             Console.WriteLine("Null");
         }
+    
+    public void RemoveDuplicate() {
+        Node current = Head;
+        while (current != null ){
+        Node followingValue = current.Next;
+        while (followingValue != null ){
+        if (current.Data == followingValue.Data){
+        Remove(followingValue.Data);
+        break;
+        }
+        followingValue = followingValue.Next;
+        }
+        current = current.Next;
+    }
     }
 }
+}
+
