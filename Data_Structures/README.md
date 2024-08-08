@@ -4,6 +4,9 @@ A simple singly linked list implementation in C# with add, remove, check, and pr
 ### Removing Duplicates :
 A simple method to check for any duplicates inside the linked list and remove and duplicated value
 
+### MergeSorted-LinkedLists
+
+
 ## Project Structure
 Node.cs: Node class.
 LinkList.cs: Linked list operations.
@@ -17,7 +20,17 @@ Space: O(1)
 
 
 ## WhiteBoard
-1. Linked List![LinkedList](../../White%20Board%20Challenge/Images/LinkedList.jpg)
+1. Linked List![LinkedList](../White%20Board%20Challenge/Images/LinkedList.jpg)
 
 2. Removing Duplicates
-![RemovingDuplicates](../../White%20Board%20Challenge/Images/RemoveDuplicateValues.png)
+![RemovingDuplicates](../White%20Board%20Challenge/Images/RemoveDuplicateValues.png)
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## MergeSortList 
+
+### Whiteboard
+![MergeSortList](../White%20Board%20Challenge/Images/MergeSortList.jpg)
