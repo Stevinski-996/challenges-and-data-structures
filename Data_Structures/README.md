@@ -34,3 +34,15 @@ Space: O(1)
 
 ### Whiteboard
 ![MergeSortList](../White%20Board%20Challenge/Images/MergeSortList.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Reverse List Using Stack & Queue 
+
+### Whiteboard
+![ReverseStack&Queue](../White%20Board%20Challenge/Images/ReverseList.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## DeleteMiddleElement
+
+### Whiteboard
+![DeleteMiddleElement](../White%20Board%20Challenge/Images/DeleteMiddleElement.jpg)

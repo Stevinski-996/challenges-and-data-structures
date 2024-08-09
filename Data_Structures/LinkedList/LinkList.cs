@@ -5,7 +5,7 @@ namespace LinkedList
 {
     public class LinkList
     {
-
+        public int Length{get;set;}
         public Node Head;
         public LinkList()
         {
@@ -28,30 +28,15 @@ namespace LinkedList
             }
             return false;
         }
-        public void Remove(int input)
+        public int RemoveHead()
         {
-            if (Head == null)
-            {
-                Console.WriteLine("List Is Empty");
-                return;
-            }
+            if (IsEmpty()) Console.WriteLine("The List is Empty");
 
-            if (Head.Data == input)
-            {
-                Head = Head.Next;
-                return;
-            }
+            Node fadi = Head;
+            Head = fadi.Next;
+            fadi.Next = null;
+            return fadi.Data;
 
-            Node? current = Head;
-            while (current?.Next != null)
-            {
-                if (current.Next.Data == input)
-                {
-                    current.Next = current.Next.Next;
-                    return;
-                }
-                current = current.Next;
-            }
         }
         public void Add(int input)
         {
@@ -69,6 +54,20 @@ namespace LinkedList
             }
             current.Next = newNode;
         }
+
+        public void AddToHead(int input)
+        {
+            Node newNode = new Node(input);
+            if (IsEmpty()){
+                Head = newNode;
+                Length++;
+                }else{
+            // Insert the new node at the beginning of the list
+            newNode.Next = Head;
+            Head = newNode;
+            Length++;
+        }}
+
         public void Print()
         {
             Node? current = Head;
@@ -96,7 +95,7 @@ namespace LinkedList
                 {
                     if (current.Data == followingValue.Data)
                     {
-                        Remove(followingValue.Data);
+                        // RemoveHead(followingValue.Data);
                         break;
                     }
                     followingValue = followingValue.Next;
@@ -105,58 +104,59 @@ namespace LinkedList
             }
         }
         public Node MergeLists(LinkList list1, LinkList list2)
-{
-    if (list1.IsEmpty() && list2.IsEmpty())
-    {
-        Console.WriteLine("Both lists are empty.");
-        return null;
-    }
-    else if (list1.IsEmpty())
-    {
-        Console.WriteLine("The first list is empty.");
-        return list2.Head;
-    }
-    else if (list2.IsEmpty())
-    {
-        Console.WriteLine("The second list is empty.");
-        return list1.Head;
-    }
-
-    Node current1 = list1.Head;
-    while (current1.Next != null)
-    {
-        current1 = current1.Next;
-    }
-    current1.Next = list2.Head;
-
-    return list1.Head;
-}
-
-public void SortedList()
-{
-  Node current = Head, travers = null;
-
-
-    while (current != null)
-    {
-        travers = current.Next;
-
-        while (travers != null)
         {
-            if(current.Data.CompareTo(travers.Data) > 0) 
+            if (list1.IsEmpty() && list2.IsEmpty())
             {
-                var temp = current.Data;
-                current.Data = travers.Data;
-                travers.Data = temp;
+                Console.WriteLine("Both lists are empty.");
+                return null;
             }
-            travers = travers.Next;
+            else if (list1.IsEmpty())
+            {
+                Console.WriteLine("The first list is empty.");
+                return list2.Head;
+            }
+            else if (list2.IsEmpty())
+            {
+                Console.WriteLine("The second list is empty.");
+                return list1.Head;
+            }
+
+            Node current1 = list1.Head;
+            while (current1.Next != null)
+            {
+                current1 = current1.Next;
+            }
+            current1.Next = list2.Head;
+
+            return list1.Head;
         }
-        current = current.Next; 
-    }
-}
-    public bool IsEmpty() {
-        return Head == null;
-    }
+
+        public void SortedList()
+        {
+            Node current = Head, travers = null;
+
+
+            while (current != null)
+            {
+                travers = current.Next;
+
+                while (travers != null)
+                {
+                    if (current.Data.CompareTo(travers.Data) > 0)
+                    {
+                        var temp = current.Data;
+                        current.Data = travers.Data;
+                        travers.Data = temp;
+                    }
+                    travers = travers.Next;
+                }
+                current = current.Next;
+            }
+        }
+        public bool IsEmpty()
+        {
+            return Head == null;
+        }
     }
 }
 
