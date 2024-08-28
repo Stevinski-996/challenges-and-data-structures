@@ -12,23 +12,23 @@ namespace LinkedList
             list = new LinkList();
         }
 
-        public bool IsEmpty()
+        public virtual bool IsEmpty()
         {
             return list.IsEmpty();
         }
 
-        public void Push(int data)
+        public virtual void Push(int data)
         {
             list.AddToHead(data);
         }
 
-        public int Pop()
+        public virtual int Pop()
         {
             if (IsEmpty()) throw new InvalidOperationException("Stack is empty");
             return list.RemoveHead();
         }
 
-        public int Peek()
+        public virtual int Peek()
         {
             if (IsEmpty()) throw new InvalidOperationException("Stack is empty");
             return list.Head.Data;
@@ -88,5 +88,45 @@ namespace LinkedList
  }
 
 
+    }
+    public class MinStack : Stack
+    {
+        private Stack minStack;
+
+        public MinStack() : base()
+        {
+            minStack = new Stack();
+        }
+
+        public override void Push(int data)
+        {
+            base.Push(data);
+
+            if (minStack.IsEmpty() || data <= minStack.Peek())
+            {
+                minStack.Push(data);
+            }
+        }
+        public override int Pop()
+        {
+            int poppedValue = base.Pop();
+
+            if (poppedValue == minStack.Peek())
+            {
+                minStack.Pop();
+            }
+
+            return poppedValue;
+        }
+
+        public int GetMin()
+        {
+            if (minStack.IsEmpty())
+            {
+                throw new InvalidOperationException("Stack is empty");
+            }
+
+            return minStack.Peek();
+        }
     }
 }

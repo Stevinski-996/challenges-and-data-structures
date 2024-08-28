@@ -75,7 +75,7 @@ namespace LinkedList
             //     }
             // }
             // Queue queue= new Queue();
-            Stack stack = new Stack();
+            // Stack stack = new Stack();
             // queue.IsEmpty();
             // queue.Enqueue(10);
             // queue.Enqueue(20);
@@ -83,21 +83,50 @@ namespace LinkedList
             // queue.Peek();
             // queue.Dequeue();
             // queue.PrintQueue();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(4);
-            stack.Push(5);
+            // stack.Push(1);
+            // stack.Push(2);
+            // stack.Push(3);
+            // stack.Push(4);
+            // stack.Push(5);
 
-            Console.WriteLine("Original Stack:");
-            stack.PrintStack();  // Expect: Head -> 5 -> 4 -> 3 -> 2 -> 1 -> Null
+            MinStack minStack = new MinStack();
 
-            stack.DeleteMiddleElement();
+        // Push elements
+minStack.Push(15); // Top -> 15 (min: 15)
+minStack.Push(7);  // Top -> 7 -> 15 (min: 7) 
+minStack.Push(12); // Top -> 12 -> 7 -> 15 (min: 7)
+minStack.Push(3);  // Top -> 3 -> 12 -> 7 -> 15 (min: 3) 
 
-            Console.WriteLine("Reversed Stack:");
-            stack.PrintStack();  // Expect: Head -> 1 -> 2 -> 4 -> 5 -> Null
+// Print the stack
+minStack.PrintStack(); // Output: Top -> 3 -> 12 -> 7 -> 15
 
+// Get the minimum element
+int min = minStack.GetMin(); // min: 3
+Console.WriteLine(min);
 
-        }
+// Pop a node from the stack
+int popped = minStack.Pop(); // popped: 3
+minStack.PrintStack(); // Output: Top -> 12 -> 7 -> 15
+
+// Get the new minimum element
+min = minStack.GetMin(); // min: 7
+Console.WriteLine(min);
+
+// Peek the top node
+int peeked = minStack.Peek(); // peeked: 12
+Console.WriteLine(peeked);
+minStack.PrintStack();
+
+// Push another element
+minStack.Push(2);  // Top -> 2 -> 12 -> 7 -> 15 (min: 2)
+minStack.PrintStack(); // Output: Top -> 2 -> 12 -> 7 -> 15
+
+// Get the new minimum element
+min = minStack.Peek(); // min: 2
+Console.WriteLine(min);
+
+// Check if the stack is empty
+bool isEmpty = minStack.IsEmpty(); // isEmpty: false
     }
+}
 }

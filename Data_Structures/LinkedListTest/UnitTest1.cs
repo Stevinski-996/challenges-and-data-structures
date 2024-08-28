@@ -1,11 +1,11 @@
-// using System;
-// using Xunit;
-// using LinkedList;
+using System;
+using Xunit;
+using LinkedList;
 
-// namespace LinkedListTest
-// {
-// public class UnitTest1
-// {
+namespace LinkedListTest
+{
+public class UnitTest1
+{
 //     [Fact]
 //     public void RemoveNode()
 //     {
@@ -73,3 +73,49 @@
         
 //       }
 //     }
+[Fact]
+  public void TestGetMinAfterPush()
+  {
+      //Test retrieving the minimum element in the stack.
+      MinStack stack = new MinStack();
+
+      stack.Push(3);
+      stack.Push(15);
+      stack.Push(12);
+      stack.Push(7);
+
+      Assert.Equal(3, stack.GetMin()); 
+  }
+
+  [Fact]
+  public void TestGetMinAfterPop()
+  {
+      // Test popping elements and verifying the minimum element in the stack after the pop.
+      MinStack stack = new MinStack();
+
+      stack.Push(10);
+      stack.Push(5);
+      stack.Push(20);
+      stack.Pop(); // Remove 20
+
+      // Act & Assert
+      Assert.Equal(5, stack.GetMin());
+      stack.Pop();
+      Assert.Equal(10, stack.GetMin()); 
+  }
+
+  [Fact]
+  public void TestGetMinAfterMultiplePushes()
+  {
+      // Test pushing elements and verifying the minimum element in the stack after the push.
+
+      MinStack stack = new MinStack();
+
+      stack.Push(10);
+      stack.Push(20);
+      stack.Push(5);
+      stack.Push(15);
+
+      Assert.Equal(5, stack.GetMin());
+  }
+}}

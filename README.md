@@ -36,3 +36,5 @@ This function, MiddleValue, takes an array and a value as input. It manually ins
 ### Challenge 7 : [Reverse_Words](Challenges/Reverse_Words/README.md)
 
 ### Challenge 8 : [LinkedList](Data_Structures/LinkedList/README.md)
+
+### Challenge Min-Stack : [Min-Stack](Data_Structures/LinkedList/README.md)

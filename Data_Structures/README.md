@@ -46,3 +46,10 @@ Space: O(1)
 
 ### Whiteboard
 ![DeleteMiddleElement](../White%20Board%20Challenge/Images/DeleteMiddleElement.jpg)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Min-Stack
+
+### Whiteboard
+![Min-Stack](../White%20Board%20Challenge/Images/MinStack.jpg)
