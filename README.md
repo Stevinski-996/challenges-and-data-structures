@@ -38,3 +38,5 @@ This function, MiddleValue, takes an array and a value as input. It manually ins
 ### Challenge 8 : [LinkedList](Data_Structures/LinkedList/README.md)
 
 ### Challenge Min-Stack : [Min-Stack](Data_Structures/LinkedList/README.md)
+
+### Binary-Tree : [Binary-Tree]((Data_Structures/LinkedList/README.md))
