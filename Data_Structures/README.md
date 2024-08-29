@@ -53,3 +53,10 @@ Space: O(1)
 
 ### Whiteboard
 ![Min-Stack](../White%20Board%20Challenge/Images/MinStack.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+## Binary-Tree
+
+
+### Whiteboard
+![Binary-Tree](../White%20Board%20Challenge/Images/BinaryTree.jpg)
