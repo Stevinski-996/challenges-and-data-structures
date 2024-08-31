@@ -40,3 +40,11 @@ This function, MiddleValue, takes an array and a value as input. It manually ins
 ### Challenge Min-Stack : [Min-Stack](Data_Structures/LinkedList/README.md)
 
 ### Binary-Tree : [Binary-Tree]((Data_Structures/LinkedList/README.md))
+
+### Mirror-Tree : [Mirror-Tree]((Data_Structures/Trees/README.md))
+
+### Max-Second-Value : [Max-Second-Value]((Data_Structures/Trees/README.md))
+
+### Leaf-Summation : [Leaf-Sum]((Data_Structures/Trees/README.md))
+
+### Largest At Level : [LargestAtEachLevel](Data_Structures/Trees/README.md)

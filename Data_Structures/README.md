@@ -60,3 +60,32 @@ Space: O(1)
 
 ### Whiteboard
 ![Binary-Tree](../White%20Board%20Challenge/Images/BinaryTree.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Mirror Tree
+
+### Whiteboard
+![Mirror-Tree](../White%20Board%20Challenge/Images/Mirror.jpg)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Second Maximum Value
+
+### Whiteboard
+![SecondMax](../White%20Board%20Challenge/Images/SecondMax.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Leaf Summation
+
+### Whiteboard
+![Leaf-Sum](../White%20Board%20Challenge/Images/SumLeafs.jpg)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## LargestAtLevel
+
+### Whiteboard
+![LargestAtLevel](../White%20Board%20Challenge/Images/LargestAtLevel.jpg)
