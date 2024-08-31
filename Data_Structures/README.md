@@ -61,7 +61,6 @@ Space: O(1)
 ### Whiteboard
 ![Binary-Tree](../White%20Board%20Challenge/Images/BinaryTree.jpg)
 
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ## Mirror Tree
