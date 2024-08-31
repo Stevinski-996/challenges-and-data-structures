@@ -68,3 +68,11 @@ Space: O(1)
 
 ### Whiteboard
 ![Mirror-Tree](../White%20Board%20Challenge/Images/Mirror.jpg)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Second Maximum Value
+
+### Whiteboard
+![SecondMax](../White%20Board%20Challenge/Images/SecondMax.jpg)
