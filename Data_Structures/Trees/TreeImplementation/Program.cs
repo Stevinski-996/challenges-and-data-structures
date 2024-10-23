@@ -96,17 +96,36 @@ static void Main(string[] args)
 //         Console.ReadKey();
 // }
  
-            BinaryTree BTree = new BinaryTree();
-            BTree.Root = new Node(2);
-            BTree.Root.Left = new Node(3);
-            BTree.Root.Right = new Node(5);
-            BTree.Root.Left.Left = new Node(4);
-            BTree.Root.Right.Right = new Node(6);
-            BTree.Root.Left.Left.Right = new Node(7);
+            // BinaryTree BTree = new BinaryTree();
+            // BTree.Root = new Node(2);
+            // BTree.Root.Left = new Node(3);
+            // BTree.Root.Right = new Node(5);
+            // BTree.Root.Left.Left = new Node(4);
+            // BTree.Root.Right.Right = new Node(6);
+            // BTree.Root.Left.Left.Right = new Node(7);
 
-            Console.WriteLine("Right View of the Tree:");
-            BTree.PrintRightView();
+            // Console.WriteLine("Right View of the Tree:");
+            // BTree.PrintRightView();
         
 
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(5);
+            BTree.Root.Left = new Node(13);
+            BTree.Root.Right = new Node(7);
+            BTree.Root.Left.Left = new Node(3);
+            BTree.Root.Left.Right = new Node(7);
+            BTree.Root.Right.Left = new Node(12);
+            BTree.Root.Right.Right = new Node(20);
+            BTree.Root.Left.Left.Left = new Node(1);
+            BTree.Root.Left.Left.Right = new Node(4);
+            BTree.Root.Right.Left.Right = new Node(11);
+
+            // Find the level with the maximum number of nodes
+            int maxLevel = BTree.FindMaxLevelNodes();
+
+            Console.WriteLine("Max Level Nodes Challenge:");
+            Console.WriteLine($"The level with the maximum number of nodes is: {maxLevel}");
+        }
+
 }
-}}
+}

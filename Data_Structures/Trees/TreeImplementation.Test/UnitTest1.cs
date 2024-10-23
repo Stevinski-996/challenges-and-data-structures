@@ -233,7 +233,50 @@ public class UnitTest1
             // Assert
             Assert.Equal($"1{Environment.NewLine}2{Environment.NewLine}3{Environment.NewLine}4{Environment.NewLine}", output);
         }
+        [Fact]
+        public void FindMaxLevelNodes_CorrectLevel_ReturnsMaxNodesLevel()
+        {
+            // Arrange
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(1);
+            BTree.Root.Left = new Node(2);
+            BTree.Root.Right = new Node(3);
+            BTree.Root.Left.Left = new Node(4);
+            BTree.Root.Left.Right = new Node(5);
+            BTree.Root.Right.Right = new Node(7);
+            BTree.Root.Left.Left.Left = new Node(8);
+            BTree.Root.Left.Right.Left = new Node(9);
+            BTree.Root.Right.Right.Left = new Node(10);
 
+            // Act
+            int maxLevel = BTree.FindMaxLevelNodes(); 
+
+            // Assert
+            Assert.Equal(2, maxLevel); 
+        }
+
+        [Fact]
+        public void FindMaxLevelNodes_AllLevelsSameNumberOfNodes_ReturnsFirstLevelWithMaxNodes()
+        {
+            // Arrange
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(1);
+            BTree.Root.Left = new Node(2);
+            BTree.Root.Right = new Node(3);
+            BTree.Root.Left.Left = new Node(4);
+            BTree.Root.Left.Right = new Node(5);
+            BTree.Root.Right.Right = new Node(6);
+            BTree.Root.Left.Left.Left = new Node(7);
+            BTree.Root.Left.Left.Right = new Node(8);
+            BTree.Root.Right.Left = new Node(9);
+            BTree.Root.Right.Right.Left = new Node(10);
+            BTree.Root.Right.Right.Right = new Node(11);
+
+            // Act
+            int result = BTree.FindMaxLevelNodes();
+
+            // Assert
+            Assert.Equal(2, result); 
+        }
         }
     }}
-    
