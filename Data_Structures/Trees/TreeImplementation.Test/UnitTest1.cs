@@ -8,6 +8,18 @@ namespace TreeImplementaion.Test
 {
 public class UnitTest1
 {
+    public class RightViewTest
+    {
+        private void CaptureConsoleOutput(Action action, out string output)
+        {
+            using (var sw = new StringWriter())
+            {
+                Console.SetOut(sw);
+                action.Invoke();
+                output = sw.ToString();
+            }
+        }
+
     [Fact]
     public void PreOrder_ShouldReturnCorrectOrder()
     {
@@ -186,5 +198,42 @@ public class UnitTest1
                 List<int> result = Btree.LargestValueEachLevel();
                 Assert.Equal(new List<int> { 5, 13, 20, 11 }, result);
             }
+            [Fact]
+        public void Test_RightView_CorrectOutput()
+        {
+            // Arrange
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(2);
+            BTree.Root.Left = new Node(3);
+            BTree.Root.Right = new Node(5);
+            BTree.Root.Left.Left = new Node(4);
+            BTree.Root.Right.Right = new Node(6);
+            BTree.Root.Left.Left.Right = new Node(7);
+
+            // Act
+            CaptureConsoleOutput(() => BTree.PrintRightView(), out string output);
+
+            // Assert
+            Assert.Equal($"2{Environment.NewLine}5{Environment.NewLine}6{Environment.NewLine}7{Environment.NewLine}", output);
         }
-    }
+
+        [Fact]
+        public void Test_RightView_OnlyRightNodes()
+        {
+            // Arrange
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(1);
+            BTree.Root.Right = new Node(2);
+            BTree.Root.Right.Right = new Node(3);
+            BTree.Root.Right.Right.Right = new Node(4);
+
+            // Act
+            CaptureConsoleOutput(() => BTree.PrintRightView(), out string output);
+
+            // Assert
+            Assert.Equal($"1{Environment.NewLine}2{Environment.NewLine}3{Environment.NewLine}4{Environment.NewLine}", output);
+        }
+
+        }
+    }}
+    

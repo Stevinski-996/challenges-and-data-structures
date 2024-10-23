@@ -3,130 +3,101 @@ using System.Collections.Generic;
 
 namespace LinkedList
 {
-
     public class Program
     {
-
         public static void Main(string[] args)
         {
-            //    LinkList list = new LinkList();
+            // Create a new linked list
+            LinkList list = new LinkList();
 
-            //     LinkList list1 = new LinkList();
-            //     LinkList list_1 = new LinkList();
-            //     LinkList list2 = new LinkList();
-            //     LinkList list_2 = new LinkList();
-            //     LinkList list3 = new LinkList();
-            //     LinkList list_3 = new LinkList();
+            // Add nodes to the list
+            list.AddNode(1);
+            list.AddNode(2);
+            list.AddNode(3);
+            list.AddNode(4);
+            list.AddNode(5);
 
-            //     int[] case1 = { 1, 3, 5 };
-            //     int[] case_1 = { 2, 4, 6 };
-            //     int[] case2 = { 5, 10, 15 };
-            //     int[] case_2 = { 2, 3, 20 }; 
-            //     int[] case3 = { 10, 20, 30 };
-            //     int[] case_3 = { 5, 15, 25, 35 };
+            // Print the original list
+            Console.WriteLine("Original List:");
+            list.Print();
 
-            //     Add(list1, case1);
-            //     Add(list_1, case_1);
+            // Rotate the list to the left by 2 positions
+            list = list.RotateLeft(24, list);
 
-            //     Console.WriteLine("\nCase #1");
-            //     list1.Print();
-            //     list_1.Print();
-            //     // Merge and sort
-            //     list1.MergeLists(list1, list_1);
-            //     list1.SortedList();
+            // Print the list after rotating
+            Console.WriteLine("List after rotating left by 2:");
+            list.Print();
 
-            //     Console.WriteLine("\nOutput #1");
-            //     list1.Print();
+            // Uncomment the following blocks to test other parts of the program
 
-            //     Add(list2, case2);
-            //     Add(list_2, case_2);
+            /*
+            // Create lists for merging and sorting
+            LinkList list1 = new LinkList();
+            LinkList list_1 = new LinkList();
+            int[] case1 = { 1, 3, 5 };
+            int[] case_1 = { 2, 4, 6 };
 
-            //     Console.WriteLine("\nCase #2");
-            //     list2.Print();
-            //     list_2.Print();
-            //     // Merge and sort
-            //     list2.MergeLists(list2, list_2);
-            //     list2.SortedList();
+            Add(list1, case1);
+            Add(list_1, case_1);
 
-            //     Console.WriteLine("\nOutput #2");
-            //     list2.Print();
+            Console.WriteLine("\nCase #1");
+            list1.Print();
+            list_1.Print();
 
-            //     Add(list3, case3);
-            //     Add(list_3, case_3);
+            // Merge and sort the lists
+            list1.MergeLists(list1, list_1);
+            list1.SortedList();
 
-            //     Console.WriteLine("\nCase #3");
-            //     list3.Print();
-            //     list_3.Print();
-            //     // Merge and sort
-            //     list3.MergeLists(list3, list_3);
-            //     list3.SortedList();
+            Console.WriteLine("\nOutput #1");
+            list1.Print();
+            */
 
-            //     Console.WriteLine("\nOutput #3");
-            //     list3.Print();
+            /*
+            // Example of using Queue and Stack
+            Queue queue = new Queue();
+            queue.Enqueue(10);
+            queue.Enqueue(20);
+            queue.PrintQueue();
+            queue.Dequeue();
+            queue.PrintQueue();
 
-            //     Console.ReadKey();
-            // }
+            Stack stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.PrintStack();
+            */
 
-            // static void Add(LinkList list, int[] values)
-            // {
-            //     foreach (var value in values)
-            //     {
-            //         list.Add(value);
-            //     }
-            // }
-            // Queue queue= new Queue();
-            // Stack stack = new Stack();
-            // queue.IsEmpty();
-            // queue.Enqueue(10);
-            // queue.Enqueue(20);
-            // queue.PrintQueue();
-            // queue.Peek();
-            // queue.Dequeue();
-            // queue.PrintQueue();
-            // stack.Push(1);
-            // stack.Push(2);
-            // stack.Push(3);
-            // stack.Push(4);
-            // stack.Push(5);
-
+            /*
+            // Example of using MinStack
             MinStack minStack = new MinStack();
+            minStack.Push(15);
+            minStack.Push(7);
+            minStack.Push(12);
+            minStack.Push(3);
 
-        // Push elements
-minStack.Push(15); // Top -> 15 (min: 15)
-minStack.Push(7);  // Top -> 7 -> 15 (min: 7) 
-minStack.Push(12); // Top -> 12 -> 7 -> 15 (min: 7)
-minStack.Push(3);  // Top -> 3 -> 12 -> 7 -> 15 (min: 3) 
+            minStack.PrintStack();
+            Console.WriteLine($"Min: {minStack.GetMin()}");
 
-// Print the stack
-minStack.PrintStack(); // Output: Top -> 3 -> 12 -> 7 -> 15
+            minStack.Pop();
+            minStack.PrintStack();
+            Console.WriteLine($"New Min: {minStack.GetMin()}");
 
-// Get the minimum element
-int min = minStack.GetMin(); // min: 3
-Console.WriteLine(min);
+            minStack.Push(2);
+            minStack.PrintStack();
+            Console.WriteLine($"Peek: {minStack.Peek()}");
+            */
+        }
 
-// Pop a node from the stack
-int popped = minStack.Pop(); // popped: 3
-minStack.PrintStack(); // Output: Top -> 12 -> 7 -> 15
-
-// Get the new minimum element
-min = minStack.GetMin(); // min: 7
-Console.WriteLine(min);
-
-// Peek the top node
-int peeked = minStack.Peek(); // peeked: 12
-Console.WriteLine(peeked);
-minStack.PrintStack();
-
-// Push another element
-minStack.Push(2);  // Top -> 2 -> 12 -> 7 -> 15 (min: 2)
-minStack.PrintStack(); // Output: Top -> 2 -> 12 -> 7 -> 15
-
-// Get the new minimum element
-min = minStack.Peek(); // min: 2
-Console.WriteLine(min);
-
-// Check if the stack is empty
-bool isEmpty = minStack.IsEmpty(); // isEmpty: false
+        // Helper method to add multiple values to a list
+        static void Add(LinkList list, int[] values)
+        {
+            foreach (var value in values)
+            {
+                list.Add(value);
+            }
+        }
     }
-}
+
+    // You can place your Queue, Stack, MinStack, and other classes here
 }
