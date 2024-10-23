@@ -48,3 +48,7 @@ This function, MiddleValue, takes an array and a value as input. It manually ins
 ### Leaf-Summation : [Leaf-Sum]((Data_Structures/Trees/README.md))
 
 ### Largest At Level : [LargestAtEachLevel](Data_Structures/Trees/README.md)
+
+### Rotate LinkList : [RotateLinkList]((Data_Structures/LinkedList/README.md))
+
+### RightViewPrint : [RightViewPrint](Data_Structures/Trees/README.md)
