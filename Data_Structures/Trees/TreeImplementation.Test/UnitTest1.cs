@@ -279,4 +279,23 @@ public class UnitTest1
             Assert.Equal(2, result); 
         }
         }
+        [Fact]
+        public void Test_MinimumDepth_WithMultipleNodes_VaryingDepths()
+        {
+            // Arrange
+            BinaryTree BTree = new BinaryTree();
+            BTree.Root = new Node(1);
+            BTree.Root.Left = new Node(2);
+            BTree.Root.Right = new Node(3);
+            BTree.Root.Left.Left = new Node(4);
+            BTree.Root.Left.Right = new Node(5);
+
+            // Act
+            int minDepth = BTree.FindMinDepth();
+
+            // Assert
+            Assert.Equal(2, minDepth);  
+        }
+
+        
     }}
