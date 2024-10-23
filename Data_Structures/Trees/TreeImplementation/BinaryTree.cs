@@ -186,5 +186,43 @@ public class BinaryTree
         }
         return largestValues;
     }
+        private int maxLevel = 0;
+        private object value;
+
+        public void PrintRightView()
+        {
+            try
+            {
+                if (Root == null)
+                {
+                    Console.WriteLine("The tree is empty.");
+                    return;
+                }
+
+                PrintRightViewUtil(Root, 1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+
+        public void PrintRightViewUtil(Node node, int currentLevel)
+        {
+            if (node == null)
+                return;
+
+
+            if (maxLevel < currentLevel)
+            {
+                Console.WriteLine(node.Data);
+                maxLevel = currentLevel;
+            }
+
+
+            PrintRightViewUtil(node.Right, currentLevel + 1);
+            PrintRightViewUtil(node.Left, currentLevel + 1);
+        }
+
 }
 }
